@@ -12,7 +12,7 @@ function respond() {
       botRegexBG = /^\/bubblegum/; botRegexSTP = /^\/stats/;botRegexSTT = /^\/tstats/;botRegexRL = /^\/rule/;
       botRegexSTD = /^\/standings/;botRegexRK = /^\/rank/;botRegexCMD = /^\/command/; botRegexFA = /^\/free agents/;botRegexMRK = /^\/rookies/;
       botRegexTD = /^\/trade/; botRegexSG = /^\/sign/; botRegexRLP = /^\/release/;botRegexSLR = /^\/salary/;
-      botRegexRLS = /^\/rules/; botRegexBRK = /^\/breakdown/; 
+      botRegexRLS = /^\/rules/; botRegexBRK = /^\/breakdown/; botRegexSwerve = /^\/swerve/;  
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
