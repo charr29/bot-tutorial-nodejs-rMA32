@@ -5,15 +5,12 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-           botRegex = /^\/cool guy/;  botRegexDL = /^\/DEP/i;botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/
+       botRegex = /^\/cool guy/;  botRegexDL = /^\/DEP/i;botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/
       botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SCH/i; botODB = /^\odb/i; botDuck = /^\/duck/;
       botRegexP = /^\/Find/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/;
       botRegexSS = /^\/who is stu/; botRegexKK = /^\/kerm/; botRegexCC = /^\/cool/; botRegexGL = /^\/LG Schedule/; botRegexPN = /^\/will antoine make playoffs/;
       botRegexBG = /^\/bubblegum/; botRegexSTP = /^\/stats/;botRegexSTT = /^\/tstats/;botRegexRL = /^\/rule/;
-      botRegexSTD = /^\/standings/;botRegexRK = /^\/rank/;botRegexCMD = /^\/command/; botRegexFA = /^\/free agents/;botRegexMRK = /^\/rookies/;
-      botRegexTD = /^\/trade/; botRegexSG = /^\/sign/; botRegexRLP = /^\/release/;botRegexSLR = /^\/salary/;
-      botRegexRLS = /^\/rules/; botRegexBRK = /^\/breakdown/; botRegexSwerve = /^\/swerve/;  botRegexJC = /^\/Geezus/; 
-
+   
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
