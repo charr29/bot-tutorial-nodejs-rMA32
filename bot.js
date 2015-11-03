@@ -47,7 +47,7 @@ function respond() {
   
     else if(request.text && botRegexBG.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://giphy.com/gifs/90s-1990s-fruit-stripe-gum-riV4c1qKzhKi4");
+    postMessage("https://media.giphy.com/media/riV4c1qKzhKi4/giphy.gif");
     this.res.end();
   } 
    else if(request.text && botRegexGL.test(request.text)) {
