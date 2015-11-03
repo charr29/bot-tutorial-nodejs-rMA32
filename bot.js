@@ -9,6 +9,7 @@ function respond() {
       botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /^\odb/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/;
       botRegexSS = /^\/who is stu/; botRegexKK = /^\/kerm/; botRegexCC = /^\/cool/; botRegexGL = /^\/left/; botRegexPN = /^\/will antoine make playoffs/;
+      botRegexBG = /^\/bubblegum/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -44,6 +45,11 @@ function respond() {
     this.res.end();
   } 
   
+    else if(request.text && botRegexBG.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://giphy.com/gifs/90s-1990s-fruit-stripe-gum-riV4c1qKzhKi4");
+    this.res.end();
+  } 
    else if(request.text && botRegexGL.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://daddyleagues.com/NT/schedules");
