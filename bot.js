@@ -12,7 +12,8 @@ function respond() {
       botRegexBG = /^\/bubblegum/; botRegexSTP = /^\/stats/;botRegexSTT = /^\/tstats/;botRegexRL = /^\/rule/;
       botRegexSTD = /^\/standings/;botRegexRK = /^\/rank/;botRegexCMD = /^\/command/; botRegexFA = /^\/free agents/;botRegexMRK = /^\/rookies/;
       botRegexTD = /^\/trade/; botRegexSG = /^\/sign/; botRegexRLP = /^\/release/;botRegexSLR = /^\/salary/;
-      botRegexRLS = /^\/rules/; botRegexBRK = /^\/breakdown/; botRegexSwerve = /^\/swerve/; botRegexJC = /^\/geezus/ 
+      botRegexRLS = /^\/rules/; botRegexBRK = /^\/breakdown/; botRegexSwerve = /^\/swerve/; botRegexJC = /^\/geezus/;
+      botRegexDN = /^\/Deez Nuts/; 
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -118,7 +119,15 @@ function respond() {
     postMessage("http://38.media.tumblr.com/3fe9310d30f7ab474a46499b549b8a55/tumblr_mjt8buEg3r1rvqgomo1_250.gif");
     this.res.end();
     
+    
+    
   }
+  
+    else if(request.text && botRegexDN.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://memecrunch.com/meme/7S7AV/got-heem/image.png?w=480&c=1");
+    this.res.end();
+  } 
   
    else if(request.text && botRegexJC.test(request.text)) {
     this.res.writeHead(200);
