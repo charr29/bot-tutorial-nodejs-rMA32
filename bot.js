@@ -44,25 +44,25 @@ function respond() {
     
   else if(request.text && botRegexRL.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/NT/stats/rules");
+    postMessage("http://daddyleagues.com/NT/rules");
     this.res.end();
   } 
     
   else if(request.text && botRegexRLS.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/NT/stats/rules");
+    postMessage("http://daddyleagues.com/NT/rules");
     this.res.end();
   } 
     
   else if(request.text && botRegexSTD.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/NT/stats/standings");
+    postMessage("http://daddyleagues.com/NT/standings");
     this.res.end();
   } 
     
  else if(request.text && botRegexRK.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/NT/stats/standings/rankings");
+    postMessage("http://daddyleagues.com/NT/standings/rankings");
     this.res.end();
   } 
     
