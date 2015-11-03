@@ -26,6 +26,102 @@ function respond() {
     postMessage("http://daddyleagues.com/nt/team/"+request.text.substring(5,8)+"/depthchart");
     this.res.end();
   } 
+  
+
+  
+  else if(request.text && botRegexSTP.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://daddyleagues.com/NT/stats/player");
+    this.res.end();
+  }  
+  
+  else if(request.text && botRegexSTT.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://daddyleagues.com/NT/stats/team");
+    this.res.end();
+  } 
+  
+    
+  else if(request.text && botRegexRL.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://daddyleagues.com/NT/stats/rules");
+    this.res.end();
+  } 
+    
+  else if(request.text && botRegexRLS.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://daddyleagues.com/NT/stats/rules");
+    this.res.end();
+  } 
+    
+  else if(request.text && botRegexSTD.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://daddyleagues.com/NT/stats/standings");
+    this.res.end();
+  } 
+    
+ else if(request.text && botRegexRK.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://daddyleagues.com/NT/stats/standings/rankings");
+    this.res.end();
+  } 
+    
+  else if(request.text && botRegexFA.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://daddyleagues.com/NT/players?name=&position=all&team=fa");
+    this.res.end();
+  } 
+    
+  else if(request.text && botRegexMRK.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://daddyleagues.com/NT/players?name=&position=all&team=all&rookie=1");
+    this.res.end();
+  } 
+    
+  else if(request.text && botRegexTD.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://daddyleagues.com/NT/frontoffice/trade");
+    this.res.end();
+  } 
+    
+  else if(request.text && botRegexSG.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://daddyleagues.com/NT/frontoffice/sign");
+    this.res.end();
+  } 
+    
+  else if(request.text && botRegexRLP.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://daddyleagues.com/NT/frontoffice/release");
+    this.res.end();
+  } 
+    
+  else if(request.text && botRegexSG.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://daddyleagues.com/NT/frontoffice/salaries");
+    this.res.end();
+  } 
+    
+  else if(request.text && botRegexBRK.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://daddyleagues.com/NT/frontoffice/rosterbreakdown");
+    this.res.end();
+  } 
+    
+  else if(request.text && botRegexSwerve.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://38.media.tumblr.com/3fe9310d30f7ab474a46499b549b8a55/tumblr_mjt8buEg3r1rvqgomo1_250.gif");
+    this.res.end();
+    
+  }
+  
+   else if(request.text && botRegexJC.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://memecrunch.com/meme/6GU2A/jesus-christ-kid/image.png");
+    this.res.end();
+    
+  }
+
   else if(request.text && botRegexSalt.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.imgur.com/B5BSVqH.png");
