@@ -13,7 +13,7 @@ function respond() {
       botRegexSTD = /^\/standings/;botRegexRK = /^\/rank/;botRegexCMD = /^\/command/; botRegexFA = /^\/free agents/;botRegexMRK = /^\/rookies/;
       botRegexTD = /^\/trade/; botRegexSG = /^\/sign/; botRegexRLP = /^\/release/;botRegexSLR = /^\/salary/;
       botRegexRLS = /^\/rules/; botRegexBRK = /^\/breakdown/; botRegexSwerve = /^\/swerve/; botRegexJC = /^\/geezus/;
-      botRegexDN = /^\/Deez Nuts/; 
+      botRegexDN = /^\/Deez Nuts/;  botRegexBBQ = /^\/BBQ/; 
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -126,6 +126,12 @@ function respond() {
     else if(request.text && botRegexDN.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://memecrunch.com/meme/7S7AV/got-heem/image.png?w=480&c=1");
+    this.res.end();
+  } 
+  
+      else if(request.text && botRegexBBQ.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://i.groupme.com/500x281.png.2a94e2f011174b7e9f549802f694cfcd.large");
     this.res.end();
   } 
   
