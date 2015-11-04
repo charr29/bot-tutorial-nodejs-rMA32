@@ -14,7 +14,7 @@ function respond() {
       botRegexTD = /^\/trade/; botRegexSG = /^\/sign/; botRegexRLP = /^\/release/;botRegexSLR = /^\/salary/;
       botRegexRLS = /^\/rules/; botRegexBRK = /^\/breakdown/; botRegexSwerve = /^\/swerve/; botRegexJC = /^\/geezus/;
       botRegexDN = /^\/Deez Nuts/;  botRegexBBQ = /^\/BBQ/; botRegexSTOP = /^\/STOP/; botRegexMIX = /^\/MIXTAPE/;
-      botRegexYUP = /^\/yup/;
+      botRegexYUP = /^\/yup/; botRegexTRASH = /^\/trash/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -121,7 +121,12 @@ function respond() {
     this.res.end();
     
     
+  } 
     
+  else if(request.text && botRegexTRASH.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://www.clipartbest.com/cliparts/eiM/dM8/eiMdM8nin.jpeg");
+    this.res.end();
   }
   
     else if(request.text && botRegexDN.test(request.text)) {
