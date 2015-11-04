@@ -102,7 +102,7 @@ function respond() {
     this.res.end();
   } 
     
-  else if(request.text && botRegexSG.test(request.text)) {
+  else if(request.text && botRegexSLR.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://daddyleagues.com/NT/frontoffice/salaries");
     this.res.end();
