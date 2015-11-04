@@ -14,7 +14,7 @@ function respond() {
       botRegexTD = /^\/trade/; botRegexSG = /^\/sign/; botRegexRLP = /^\/release/;botRegexSLR = /^\/salary/;
       botRegexRLS = /^\/rules/; botRegexBRK = /^\/breakdown/; botRegexSwerve = /^\/swerve/; botRegexJC = /^\/geezus/;
       botRegexDN = /^\/Deez Nuts/;  botRegexBBQ = /^\/BBQ/; botRegexSTOP = /^\/STOP/; botRegexMIX = /^\/MIXTAPE/;
-      botRegexYUP = /^\/yup/; botRegexTRASH = /^\/trash/; botRegexLOL = /^\/lol/;
+      botRegexYUP = /^\/yup/; botRegexTRASH = /^\/trash/; botRegexLOL = /^\/lol/;botRegexLMAO = /^\/lmao/; botRegexWMIT = /^\/whose mans is this/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -257,6 +257,17 @@ function respond() {
     postMessage("http://replycandy.com/wp-content/uploads/Goodfellas-Ray-Liotta-Laughing-Reaction-Face.jpg");
     this.res.end();
     
+  } 
+  else if(request.text && botRegexLMAO.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://i.groupme.com/540x304.gif.b7c73a3a87624ab9bafd6afab0d9a289.large");
+    this.res.end();
+    
+  } 
+  else if(request.text && botRegexWMIT.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://i.groupme.com/350x184.jpeg.93abed575d4a43cb87631dd2d4558947.large");
+    this.res.end();
   } 
   else if(request.text && botODB.test(request.text)) {
     this.res.writeHead(200);
