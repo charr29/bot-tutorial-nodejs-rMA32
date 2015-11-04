@@ -14,7 +14,7 @@ function respond() {
       botRegexTD = /^\/trade/; botRegexSG = /^\/sign/; botRegexRLP = /^\/release/;botRegexSLR = /^\/salary/;
       botRegexRLS = /^\/rules/; botRegexBRK = /^\/breakdown/; botRegexSwerve = /^\/swerve/; botRegexJC = /^\/geezus/;
       botRegexDN = /^\/Deez Nuts/;  botRegexBBQ = /^\/BBQ/; botRegexSTOP = /^\/STOP/; botRegexMIX = /^\/MIXTAPE/;
-      botRegexYUP = /^\/yup/; botRegexTRASH = /^\/trash/;
+      botRegexYUP = /^\/yup/; botRegexTRASH = /^\/trash/; botRegexLOL = /^\/lol/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -252,6 +252,12 @@ function respond() {
     postMessage("https://docs.google.com/spreadsheets/d/1kJqQWCq3RKiTrd4f71FFNKr-Y0ppJzjk0fSF0rP6Bto/edit?usp=sharing");
     this.res.end();
   } 
+  else if(request.text && botRegexLOL.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://replycandy.com/wp-content/uploads/Goodfellas-Ray-Liotta-Laughing-Reaction-Face.jpg");
+    this.res.end();
+    
+  } 
   else if(request.text && botODB.test(request.text)) {
     this.res.writeHead(200);
     postMessage("OBJ*");
@@ -261,6 +267,7 @@ function respond() {
     this.res.writeHead(200);
     postMessage("http://media3.giphy.com/media/YCseTHF2I6CCA/giphy.gif");
     this.res.end();
+  
   
   
   }
