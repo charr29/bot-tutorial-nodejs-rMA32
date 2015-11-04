@@ -14,6 +14,7 @@ function respond() {
       botRegexTD = /^\/trade/; botRegexSG = /^\/sign/; botRegexRLP = /^\/release/;botRegexSLR = /^\/salary/;
       botRegexRLS = /^\/rules/; botRegexBRK = /^\/breakdown/; botRegexSwerve = /^\/swerve/; botRegexJC = /^\/geezus/;
       botRegexDN = /^\/Deez Nuts/;  botRegexBBQ = /^\/BBQ/; botRegexSTOP = /^\/STOP/; botRegexMIX = /^\/MIXTAPE/;
+      botRegexYUP = /^\/yup/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -140,12 +141,21 @@ function respond() {
     postMessage("http://memecrunch.com/meme/6GU2A/jesus-christ-kid/image.png");
     this.res.end();
     
-  }
+   }
 
   else if(request.text && botRegexSalt.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.imgur.com/B5BSVqH.png");
+    this.res.end(); 
+    
+    
+  }
+
+  else if(request.text && botRegexYUP.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://cdn2.streamable.com/image/27effa2016ad11e5bdc3950552d45574.jpg");
     this.res.end();
+    
   }  else if(request.text && botRegexCC.test(request.text)) {
     this.res.writeHead(200);
     postMessage("As cool as the other side of the pillow.");
