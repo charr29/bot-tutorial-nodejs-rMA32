@@ -36,7 +36,7 @@ function respond() {
     this.res.writeHead(200);
     postMessage("http://daddyleagues.com/NT/stats/player");
     this.res.end();  
-    
+  }
     else if(request.text && botRegexADMIN.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://daddyleagues.com/NT/admin");
