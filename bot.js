@@ -7,7 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
        botRegex = /^\/cool guy/;  botRegexDL = /^\/DEP/i;botRegexSalt = /^\/salt/;botRegexYub = /^\/yubnub/
       botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SCH/i; botODB = /^\odb/i; botDuck = /^\/duck/;
-      botRegexP = /^\/find/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/;
+      botRegexP = /^\/find/i;  botRegexTw = /^\/twitch/i; botRegexYt = /^\/YT/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/;
       botRegexSS = /^\/who is stu/; botRegexKK = /^\/kerm/; botRegexCC = /^\/cool/; botRegexGL = /^\/LG schedule/; botRegexPN = /^\/will antoine make playoffs/;
       botRegexBG = /^\/bubblegum/; botRegexSTP = /^\/stats/;botRegexSTT = /^\/tstats/;botRegexRL = /^\/rule/;
       botRegexSTD = /^\/standings/;botRegexRK = /^\/rank/;botRegexCMD = /^\/command/; botRegexFA = /^\/free agents/;botRegexMRK = /^\/rookies/;
@@ -15,7 +15,8 @@ function respond() {
       botRegexRLS = /^\/rules/; botRegexBRK = /^\/breakdown/; botRegexSwerve = /^\/swerve/; botRegexJC = /^\/geezus/;
       botRegexDN = /^\/Deez Nuts/;  botRegexBBQ = /^\/BBQ/; botRegexSTOP = /^\/STOP/; botRegexMIX = /^\/MIXTAPE/;
       botRegexYUP = /^\/yup/; botRegexTRASH = /^\/trash/; botRegexLOL = /^\/lol/;botRegexLMAO = /^\/lmao/; botRegexWMIT = /^\/whose mans is this/;
-       botRegexADMIN = /^\/admin/;
+       botRegexADMIN = /^\/admin/; botRegexStreamRule = /^\/stream/; botRegexMP = /^\/mp/; botRegexSRS = /^\/safety/; botRegexSP = /^\/statpad/;
+      botRegexQS = /^\/quicksnap/; botRegexNH = /^\/nohuddle/; botRegexFDR = /^\/fourth/; botRegexSRS = /^\/safety/;
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
@@ -28,6 +29,55 @@ function respond() {
     this.res.writeHead(200);
     postMessage("http://daddyleagues.com/nt/team/"+request.text.substring(5,8)+"/depthchart");
     this.res.end();
+     }
+    else if(request.text && botRegexStreamRule.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://i1330.photobucket.com/albums/w579/charr29/Mobile%20Uploads/Screenshot_20161002-092105_zpszyepwhmw.jpg");
+    this.res.end();
+ }
+    else if(request.text && botRegexMP.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://i1330.photobucket.com/albums/w579/charr29/Mobile%20Uploads/Screenshot_20161002-092829_zpsxm4c5j6p.jpg");
+    this.res.end();
+ }
+    else if(request.text && botRegexSRS.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://i1330.photobucket.com/albums/w579/charr29/Mobile%20Uploads/Screenshot_20161002-092747_zpsopssc3jk.jpg");
+    this.res.end();
+      
+  }
+    else if(request.text && botRegexSP.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://i1330.photobucket.com/albums/w579/charr29/Mobile%20Uploads/Screenshot_20161002-092454_zps7wjizipu.jpg");
+    this.res.end();
+      
+      }
+    else if(request.text && botRegexQS.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://i1330.photobucket.com/albums/w579/charr29/Mobile%20Uploads/Screenshot_20161002-092426_zps9ktkqcks.jpg");
+    this.res.end();
+ } 
+  
+  else if(request.text && botRegexNH.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://i1330.photobucket.com/albums/w579/charr29/Mobile%20Uploads/Screenshot_20161002-092355_zpsoirm95va.jpg");
+    this.res.end();
+ }
+   
+   else if(request.text && botRegexFDR.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://i1330.photobucket.com/albums/w579/charr29/Mobile%20Uploads/Screenshot_20161002-092310_zpsdb8xf5dj.jpg");
+    this.res.end();
+ } 
+  
+  
+  else if(request.text && botRegexADMIN.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://daddyleagues.com/NT/admin");
+    this.res.end();
+
+    
+    
   } 
   
 
@@ -241,6 +291,13 @@ function respond() {
   else if(request.text && botRegexTw.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://www.twitch.tv/"+request.text.substring(8,request.text.length));
+    this.res.end();
+    
+    }  
+
+  else if(request.text && botRegexYt.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://www.youtube.com/"+request.text.substring(3,request.text.length));
     this.res.end();
   } 
   else if(request.text && botRegexSb.test(request.text)) {
