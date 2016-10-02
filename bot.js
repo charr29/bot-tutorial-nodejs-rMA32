@@ -297,7 +297,7 @@ function respond() {
 
   else if(request.text && botRegexYt.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://www.youtube.com/"+request.text.substring(3,request.text.length));
+    postMessage("http://www.youtube.com/"+request.text.substring(4,request.text.length));
     this.res.end();
   } 
   else if(request.text && botRegexSb.test(request.text)) {
